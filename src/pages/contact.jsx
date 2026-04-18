@@ -6,10 +6,10 @@ import WhatsAppFloat from "./whatsaappfloat";
 export default function Contact() {
     const [message, setMessage] = useState("");
 
-    const phoneNumber = "2347078910740"; // 🔥 replace with your WhatsApp number
+    const phoneNumber = "2347078917208"; // 🔥 replace with your WhatsApp number
 
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-        message || "Hello PEACELUXE, I want to make an order."
+        message || "Hello JUJOLUXE, I want to make an order."
     )}`;
 
     return (
@@ -19,7 +19,7 @@ export default function Contact() {
                 {/* HEADER */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-light tracking-wide">
-                        Connect With PEACELUXE
+                        Connect With JUJOLUXE
                     </h2>
                     <p className="text-white/60 mt-4 max-w-2xl mx-auto">
                         Luxury fashion, beauty & lifestyle — reach out directly via WhatsApp or social media.
