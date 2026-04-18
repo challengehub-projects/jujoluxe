@@ -38,7 +38,7 @@ export default function About() {
         </h3>
 
         <p className="text-white/60 leading-relaxed">
-          PEACELUXE is a modern perfume house creating signature fragrances inspired by elegance, emotion, and timeless luxury. Each scent is carefully composed to capture individuality, confidence, and unforgettable presence — turning every moment into a lasting memory.
+     JUJOLUXE is a modern perfume house creating signature fragrances inspired by elegance, emotion, and timeless luxury. Each scent is carefully crafted to express individuality, confidence, and unforgettable presence — turning every moment into a lasting fragrance memory.
         </p>
       </motion.div>
 
@@ -58,7 +58,7 @@ export default function About() {
     {/* FEATURES */}
     <div className="text-center mb-14">
       <h3 className="text-3xl font-light tracking-wide">
-        Why PEACELUXE Fragrances
+        Why JUJOLUXE Fragrances
       </h3>
     </div>
 
