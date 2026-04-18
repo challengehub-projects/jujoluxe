@@ -9,7 +9,7 @@ export default function About() {
     {/* HEADER */}
     <div className="text-center mb-20">
       <h2 className="text-4xl font-light tracking-[6px]">
-        ABOUT PEACELUXE
+        ABOUT JUJOLUXE
       </h2>
       <p className="text-white/60 mt-4 max-w-2xl mx-auto">
         A luxury fragrance house dedicated to crafting timeless scents that define elegance, emotion, and presence.
