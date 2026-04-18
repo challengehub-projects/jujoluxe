@@ -42,22 +42,22 @@ export default function Footer() {
 
                             <div className="flex items-center gap-2">
                                 <FaPhone className="text-[#d4af37]" />
-                                <span>+234 812 345 6789</span>
+                                <span>+23407078917208</span>
                             </div>
 
                             <div className="flex items-center gap-2">
                                 <FaPhone className="text-[#d4af37]" />
-                                <span>+234 901 234 5678</span>
+                                <span>+23407078917208</span>
                             </div>
 
                             <div className="flex items-center gap-2">
                                 <FaEnvelope className="text-[#d4af37]" />
-                                <span>hello@peaceluxe.com</span>
+                                <span>julietzuby10@gmail.com</span>
                             </div>
 
                             {/* WHATSAPP BUTTON */}
                             <a
-                                href="https://wa.me/2348123456789"
+                                href="https://wa.me/2347078917208"
                                 target="_blank"
                                 className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-full border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition"
                             >
