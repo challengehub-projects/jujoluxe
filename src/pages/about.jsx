@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import WhatsAppFloat from "./whatsaappfloat";
 
 export default function About() {
+ 
+
   return (
     <section className="bg-black text-white py-28 px-6">
   <div className="max-w-6xl mx-auto">
@@ -9,7 +11,7 @@ export default function About() {
     {/* HEADER */}
     <div className="text-center mb-20">
       <h2 className="text-4xl font-light tracking-[6px]">
-        ABOUT JUJOLUXE
+        ABOUT JUJO'LE LUXE_SCENTS
       </h2>
       <p className="text-white/60 mt-4 max-w-2xl mx-auto">
         A luxury fragrance house dedicated to crafting timeless scents that define elegance, emotion, and presence.
@@ -38,7 +40,7 @@ export default function About() {
         </h3>
 
         <p className="text-white/60 leading-relaxed">
-     JUJOLUXE is a modern perfume house creating signature fragrances inspired by elegance, emotion, and timeless luxury. Each scent is carefully crafted to express individuality, confidence, and unforgettable presence — turning every moment into a lasting fragrance memory.
+        JUJO'LE LUXE_SCENTS is a modern perfume house creating signature fragrances inspired by elegance, emotion, and timeless luxury. Each scent is carefully composed to capture individuality, confidence, and unforgettable presence — turning every moment into a lasting memory.
         </p>
       </motion.div>
 
@@ -58,7 +60,7 @@ export default function About() {
     {/* FEATURES */}
     <div className="text-center mb-14">
       <h3 className="text-3xl font-light tracking-wide">
-        Why JUJOLUXE Fragrances
+        Why JUJO'LE LUXE_SCENTS Fragrances
       </h3>
     </div>
 

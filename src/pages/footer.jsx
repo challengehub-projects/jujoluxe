@@ -11,7 +11,7 @@ export default function Footer() {
                     {/* BRAND */}
                     <div>
                         <h1 className="text-xl tracking-[6px] font-light mb-4">
-                            JUJOLUXE
+                        JUJO'LE LUXE_SCENTS
                         </h1>
                         <p className="text-white/50 text-sm leading-relaxed">
                             Luxury fashion, beauty & lifestyle brand offering premium collections
@@ -42,22 +42,22 @@ export default function Footer() {
 
                             <div className="flex items-center gap-2">
                                 <FaPhone className="text-[#d4af37]" />
-                                <span>+23407078917208</span>
+                                <span>+234 812 345 6789</span>
                             </div>
 
                             <div className="flex items-center gap-2">
                                 <FaPhone className="text-[#d4af37]" />
-                                <span>+23407078917208</span>
+                                <span>+234 901 234 5678</span>
                             </div>
 
                             <div className="flex items-center gap-2">
                                 <FaEnvelope className="text-[#d4af37]" />
-                                <span>julietzuby10@gmail.com</span>
+                                <span>hello@peaceluxe.com</span>
                             </div>
 
                             {/* WHATSAPP BUTTON */}
                             <a
-                                href="https://wa.me/2347078917208"
+                                href="https://wa.me/2348123456789"
                                 target="_blank"
                                 className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-full border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition"
                             >
@@ -88,7 +88,7 @@ export default function Footer() {
                         <FaTwitter className="text-xl hover:text-[#d4af37] transition" />
                     </a>
 
-                    <a href="mailto:hello@peaceluxe.com">
+                    <a href="mailto:julietzuby10@gmail.com">
                         <FaEnvelope className="text-xl hover:text-[#d4af37] transition" />
                     </a>
 
