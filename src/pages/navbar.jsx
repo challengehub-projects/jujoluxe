@@ -18,7 +18,7 @@ function Navbar() {
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-5">
 
         {/* BRAND */}
-        <h1 className="text-white tracking-[6px] font-light text-lg">
+        <h1 className="text-white tracking-[6px] font-light text-lg text-sm">
         JUJO'LE LUXE_SCENTS
         </h1>
 
