@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import { FaWhatsapp, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { useState } from "react";
-import WhatsAppFloat from "./whatsappfloat";
+import WhatsAppFloat from "./whatsaappfloat";
 
 export default function Contact() {
     const [message, setMessage] = useState("");
 
-    const phoneNumber = "2347078910740"; // 🔥 replace with your WhatsApp number
+    const phoneNumber = "2347078917208"; // 🔥 replace with your WhatsApp number
 
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-        message || "Hello PEACELUXE, I want to make an order."
+        message || "Hello JUJO'LE LUXE_SCENTS, I want to make an order."
     )}`;
 
     return (
@@ -19,7 +19,7 @@ export default function Contact() {
                 {/* HEADER */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-light tracking-wide">
-                        Connect With PEACELUXE
+                        Connect With JUJO'LE LUXE_SCENTS
                     </h2>
                     <p className="text-white/60 mt-4 max-w-2xl mx-auto">
                         Luxury fashion, beauty & lifestyle — reach out directly via WhatsApp or social media.
@@ -90,7 +90,7 @@ export default function Contact() {
                         {/* SOCIALS */}
                         <div className="flex justify-center gap-6 mt-8 text-white/60">
 
-                            <a href="https://instagram.com" target="_blank">
+                            <a href="https://Julie_zubechi.com" target="_blank">
                                 <FaInstagram className="text-xl hover:text-[#d4af37] transition" />
                             </a>
 
@@ -113,7 +113,7 @@ export default function Contact() {
                 </div>
             </div>
 
-        <WhatsAppFloat />
+            <WhatsAppFloat />
         </section>
     );
 }
