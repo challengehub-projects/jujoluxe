@@ -11,7 +11,7 @@ export default function Footer() {
                     {/* BRAND */}
                     <div>
                         <h1 className="text-xl tracking-[6px] font-light mb-4">
-                        JUJO'LE LUXE_SCENTS
+                            PEACELUXE
                         </h1>
                         <p className="text-white/50 text-sm leading-relaxed">
                             Luxury fashion, beauty & lifestyle brand offering premium collections
@@ -88,7 +88,7 @@ export default function Footer() {
                         <FaTwitter className="text-xl hover:text-[#d4af37] transition" />
                     </a>
 
-                    <a href="mailto:julietzuby10@gmail.com">
+                    <a href="mailto:hello@peaceluxe.com">
                         <FaEnvelope className="text-xl hover:text-[#d4af37] transition" />
                     </a>
 

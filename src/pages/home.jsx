@@ -7,7 +7,7 @@ import {
   FaTwitter,
   FaEnvelope,
 } from "react-icons/fa";
-import WhatsAppFloat from "./whatsaappfloat";
+import WhatsAppFloat from "./whatsappfloat";
 
 
 function Home() {
@@ -23,7 +23,7 @@ function Home() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "url('https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg')",
+              "url('https://images.pexels.com/photos/32616678/pexels-photo-32616678.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -56,7 +56,7 @@ function Home() {
               ease: "easeInOut",
             }}
           >
-            JUJOLUXE
+            PEACELUXE
           </motion.h1>
 
           {/* TEXT */}
@@ -66,13 +66,14 @@ function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1.5, ease: "easeInOut" }}
           >
-            A world of fragrance where every scent tells a story of elegance, emotion, and unforgettable presence.
+            From luxury fashion to beauty essentials — everything you need in one place.
+            Retail, wholesale, and nationwide delivery available.
           </motion.p>
 
           {/* BUTTON WITH SOFT GLOW PULSE */}
           <a
             href="/contact"
-            >
+          >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -98,153 +99,154 @@ function Home() {
       {/* ABOUT */}
 
       <section id="collections" className="bg-black text-white py-24 px-0 md:px-6">
-  <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
 
-    {/* HEADER */}
-    <div className="text-center mb-16 px-6">
-      <h2 className="text-4xl font-light tracking-wide">
-        JUJOLUXE Collections
-      </h2>
-      <p className="text-white/60 mt-4 max-w-2xl mx-auto">
-      Our collections are more than perfumes — they are emotions captured in scent.
-       From soft florals to deep, bold notes, each fragrance tells its own story.
-      </p>
-    </div>
+          {/* HEADER */}
+          <div className="text-center mb-16 px-6">
+            <h2 className="text-4xl font-light tracking-wide">
+              PEACELUXE Collections
+            </h2>
+            <p className="text-white/60 mt-4 max-w-2xl mx-auto">
+              Discover beauty, fashion, and lifestyle essentials — from luxury bags
+              and footwear to skincare, haircare, and natural oils.
+            </p>
+          </div>
 
-    {/* INNER SECTION */}
-    <section className="bg-black text-white py-28 px-0 md:px-6">
-      <div className="max-w-6xl mx-auto">
+          {/* INNER SECTION */}
+          <section className="bg-black text-white py-28 px-0 md:px-6">
+            <div className="max-w-6xl mx-auto">
 
-        {/* HEADER */}
-        <div className="text-center mb-20 px-6">
-          <h2 className="text-4xl font-light tracking-wide">
-            Our Collections
-          </h2>
-          <p className="text-white/60 mt-4 max-w-2xl mx-auto">
-          Explore a curated collection of luxury perfumes designed to express elegance, emotion, and timeless sophistication.
-          </p>
-        </div>
-
-        {/* CARDS */}
-        <div className="flex flex-col gap-20">
-
-          {[{
-              title: "Signature Scents",
-              img: "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg",
-              desc: "Elegant signature perfumes crafted to define your presence and style.",
-            },
-            {
-              title: "Luxury Fragrances",
-              img: "https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg",
-              desc: "High-end perfumes designed with rich notes of sophistication and charm.",
-            },
-            {
-              title: "Floral Collection",
-              img: "https://images.pexels.com/photos/4202325/pexels-photo-4202325.jpeg",
-              desc: "Soft floral scents inspired by roses, jasmine, and natural beauty.",
-            },
-            {
-              title: "Woody & Musk",
-              img: "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg",
-              desc: "Deep, bold fragrances with warm woody and musky undertones.",
-            },
-            {
-              title: "Fresh & Clean",
-              img: "https://images.pexels.com/photos/6621461/pexels-photo-6621461.jpeg",
-              desc: "Light, refreshing perfumes perfect for daily elegance and simplicity.",
-            },
-            {
-              title: "Evening Luxury",
-              img: "https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg",
-              desc: "Bold evening scents made for unforgettable nights and presence.",
-            },
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.02 }}
-              transition={{
-                duration: 1.1,
-                ease: "easeOut",
-                delay: i * 0.08,
-              }}
-              viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-none md:rounded-2xl"
-            >
-              {/* IMAGE */}
-              <img
-                src={item.img}
-                className="w-full h-[300px] md:h-[420px] object-cover transition duration-700 ease-in-out group-hover:scale-105"
-              />
-
-              {/* GRADIENT OVERLAY */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition duration-500"></div>
-
-              {/* TEXT */}
-              <div className="absolute bottom-6 left-6 right-6 md:left-10 md:right-auto max-w-md">
-                <h3 className="text-2xl font-light mb-3 relative">
-                  <span className="before:content-['“'] after:content-['”']">
-                    {item.title}
-                  </span>
-                </h3>
-                <p className="text-white/80 text-sm leading-relaxed italic opacity-90">
-                  {item.desc}
+              {/* HEADER */}
+              <div className="text-center mb-20 px-6">
+                <h2 className="text-4xl font-light tracking-wide">
+                  Our Collections
+                </h2>
+                <p className="text-white/60 mt-4 max-w-2xl mx-auto">
+                  Explore premium fashion, beauty, and lifestyle essentials curated for elegance.
                 </p>
               </div>
+
+              {/* CARDS */}
+              <div className="flex flex-col gap-20">
+
+                {[
+                  {
+                    title: "Luxury Bags",
+                    img: "https://images.pexels.com/photos/32616678/pexels-photo-32616678.jpeg",
+                    desc: "Elegant handbags and statement pieces crafted for modern fashion lovers.",
+                  },
+                  {
+                    title: "Footwear",
+                    img: "https://images.pexels.com/photos/19090/pexels-photo.jpg",
+                    desc: "Step into style with premium shoes designed for comfort and class.",
+                  },
+                  {
+                    title: "Vintage Wears",
+                    img: "https://images.pexels.com/photos/994523/pexels-photo-994523.jpeg",
+                    desc: "Timeless vintage pieces that bring uniqueness and bold expression.",
+                  },
+                  {
+                    title: "Skincare",
+                    img: "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg",
+                    desc: "Glow naturally with skincare products made for radiant healthy skin.",
+                  },
+                  {
+                    title: "Haircare",
+                    img: "https://images.pexels.com/photos/6621461/pexels-photo-6621461.jpeg",
+                    desc: "Nourish and style your hair with premium care essentials.",
+                  },
+                  {
+                    title: "Natural Oils",
+                    img: "https://images.pexels.com/photos/3762879/pexels-photo-3762879.jpeg",
+                    desc: "Pure natural oils for beauty, wellness, and everyday care routines.",
+                  },
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 80 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    whileHover={{ scale: 1.02 }}
+                    transition={{
+                      duration: 1.1,
+                      ease: "easeOut",
+                      delay: i * 0.08,
+                    }}
+                    viewport={{ once: true }}
+                    className="group relative overflow-hidden rounded-none md:rounded-2xl"
+                  >
+                    {/* IMAGE */}
+                    <img
+                      src={item.img}
+                      className="w-full h-[300px] md:h-[420px] object-cover transition duration-700 ease-in-out group-hover:scale-105"
+                    />
+
+                    {/* GRADIENT OVERLAY */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition duration-500"></div>
+
+                    {/* TEXT */}
+                    <div className="absolute bottom-6 left-6 right-6 md:left-10 md:right-auto max-w-md">
+                      <h3 className="text-2xl font-light mb-3 relative">
+                        <span className="before:content-['“'] after:content-['”']">
+                          {item.title}
+                        </span>
+                      </h3>
+                      <p className="text-white/80 text-sm leading-relaxed italic opacity-90">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+
+              </div>
+
+            </div>
+          </section>
+
+          {/* FEATURES */}
+          <div className="grid md:grid-cols-3 gap-8 mt-16 text-center px-6">
+
+            <motion.div
+              initial={{ opacity: 0, y: 80, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              viewport={{ once: true }}
+              className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition duration-500"
+            >
+              <h4 className="text-lg font-light mb-3">Retail & Wholesale</h4>
+              <p className="text-white/60 text-sm leading-relaxed">
+                We offer flexible purchasing options for individuals and businesses.
+              </p>
             </motion.div>
-          ))}
 
+            <motion.div
+              initial={{ opacity: 0, y: 80, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1.5, ease: "easeInOut", delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition duration-500"
+            >
+              <h4 className="text-lg font-light mb-3">Nationwide Delivery</h4>
+              <p className="text-white/60 text-sm leading-relaxed">
+                Fast and reliable delivery across the country.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 80, filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1.5, ease: "easeInOut", delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition duration-500"
+            >
+              <h4 className="text-lg font-light mb-3">DM to Order</h4>
+              <p className="text-white/60 text-sm leading-relaxed">
+                Easily place your orders via WhatsApp or social media.
+              </p>
+            </motion.div>
+
+          </div>
         </div>
-
-      </div>
-    </section>
-
-    {/* FEATURES */}
-    <div className="grid md:grid-cols-3 gap-8 mt-16 text-center px-6">
-
-<motion.div
-  initial={{ opacity: 0, y: 80, filter: "blur(10px)" }}
-  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-  transition={{ duration: 1.5, ease: "easeInOut" }}
-  viewport={{ once: true }}
-  className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition duration-500"
->
-  <h4 className="text-lg font-light mb-3">Signature Fragrances</h4>
-  <p className="text-white/60 text-sm leading-relaxed">
-    Discover exclusive perfumes crafted to express elegance, confidence, and individuality.
-  </p>
-</motion.div>
-
-<motion.div
-  initial={{ opacity: 0, y: 80, filter: "blur(10px)" }}
-  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-  transition={{ duration: 1.5, ease: "easeInOut", delay: 0.2 }}
-  viewport={{ once: true }}
-  className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition duration-500"
->
-  <h4 className="text-lg font-light mb-3">Long-Lasting Scent</h4>
-  <p className="text-white/60 text-sm leading-relaxed">
-    Our perfumes are designed with rich notes that stay with you throughout the day and night.
-  </p>
-</motion.div>
-
-<motion.div
-  initial={{ opacity: 0, y: 80, filter: "blur(10px)" }}
-  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-  transition={{ duration: 1.5, ease: "easeInOut", delay: 0.4 }}
-  viewport={{ once: true }}
-  className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition duration-500"
->
-  <h4 className="text-lg font-light mb-3">Luxury Experience</h4>
-  <p className="text-white/60 text-sm leading-relaxed">
-    Every bottle is crafted to deliver a premium fragrance experience that leaves a lasting impression.
-  </p>
-</motion.div>
-
-</div>
-  </div>
-</section>
+      </section>
 
 
 
@@ -380,7 +382,7 @@ function Home() {
 
           {/* FOOTER */}
           <p className="mt-12 text-white/50 text-sm tracking-wide">
-          Luxury fragrances crafted for elegance, emotion, and lasting presence — delivered with care.
+            Fashion • Beauty • Lifestyle — delivered nationwide with care.
           </p>
         </div>
 

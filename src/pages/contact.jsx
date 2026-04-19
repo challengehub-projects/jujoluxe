@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaWhatsapp, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { useState } from "react";
-import WhatsAppFloat from "./whatsaappfloat";
+import WhatsAppFloat from "./whatsappfloat";
 
 export default function Contact() {
     const [message, setMessage] = useState("");
@@ -9,7 +9,7 @@ export default function Contact() {
     const phoneNumber = "2347078910740"; // 🔥 replace with your WhatsApp number
 
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-        message || "Hello JUJO'LE LUXE_SCENTS, I want to make an order."
+        message || "Hello PEACELUXE, I want to make an order."
     )}`;
 
     return (
@@ -19,7 +19,7 @@ export default function Contact() {
                 {/* HEADER */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-light tracking-wide">
-                        Connect With JUJO'LE LUXE_SCENTS
+                        Connect With PEACELUXE
                     </h2>
                     <p className="text-white/60 mt-4 max-w-2xl mx-auto">
                         Luxury fashion, beauty & lifestyle — reach out directly via WhatsApp or social media.
@@ -113,7 +113,7 @@ export default function Contact() {
                 </div>
             </div>
 
-            <WhatsAppFloat />
+        <WhatsAppFloat />
         </section>
     );
 }
