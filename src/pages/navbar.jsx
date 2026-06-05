@@ -19,7 +19,7 @@ function Navbar() {
 
         {/* BRAND */}
         <h1 className="text-white tracking-[6px] font-light text-lg text-sm">
-        JUJO'LE LUXE_SCENTS
+        JJL_SCENTS
         </h1>
 
         {/* DESKTOP LINKS */}

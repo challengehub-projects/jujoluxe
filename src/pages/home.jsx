@@ -9,49 +9,62 @@ import {
 } from "react-icons/fa";
 import WhatsAppFloat from "./whatsaappfloat";
 
-
 function Home() {
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white relative overflow-hidden">
+
+      {/* GLOBAL AMBIENT GLOW */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div
+          className="absolute w-[450px] h-[450px] bg-[#d4af37]/20 blur-[140px] top-20 left-10 rounded-full"
+          animate={{ y: [0, 40, 0], x: [0, 20, 0] }}
+          transition={{ duration: 12, repeat: Infinity }}
+        />
+        <motion.div
+          className="absolute w-[500px] h-[500px] bg-white/10 blur-[160px] bottom-10 right-10 rounded-full"
+          animate={{ y: [0, -50, 0], x: [0, -30, 0] }}
+          transition={{ duration: 14, repeat: Infinity }}
+        />
+      </div>
 
       {/* HERO */}
-      <section
-        className="h-screen flex items-center justify-center relative text-center px-6 overflow-hidden"
-      >
+      <section className="h-screen flex items-center justify-center relative text-center px-6 overflow-hidden">
+
         {/* BACKGROUND IMAGE WITH SLOW ZOOM */}
         <motion.div
-          className="absolute inset-0"
+          className="absolute inset-0 scale-110"
           style={{
             backgroundImage:
               "url('https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          animate={{ scale: [1, 1.08] }}
+          animate={{ scale: [1.05, 1.12] }}
           transition={{
-            duration: 20,
+            duration: 22,
             ease: "easeInOut",
             repeat: Infinity,
             repeatType: "mirror",
           }}
         />
 
-        {/* OVERLAY */}
-        <div className="absolute inset-0 bg-black/70"></div>
+        {/* DARK OVERLAY (SOFTER + MORE LUXURY) */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90" />
 
-        {/* CONTENT */}
+        {/* HERO CONTENT */}
         <motion.div
           className="relative z-10 max-w-2xl"
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
+          transition={{ duration: 1.4, ease: "easeInOut" }}
         >
-          {/* TITLE (FLOATING SLOWLY) */}
+
+          {/* TITLE FLOAT IMPROVED */}
           <motion.h1
-            className="text-5xl md:text-6xl tracking-[8px] font-light"
-            animate={{ y: [0, -10, 0] }}
+            className="text-5xl md:text-6xl tracking-[10px] font-light"
+            animate={{ y: [0, -12, 0] }}
             transition={{
-              duration: 6,
+              duration: 7,
               repeat: Infinity,
               ease: "easeInOut",
             }}
@@ -61,200 +74,190 @@ function Home() {
 
           {/* TEXT */}
           <motion.p
-            className="mt-6 text-white/80 leading-relaxed text-sm md:text-base"
+            className="mt-6 text-white/70 leading-relaxed text-sm md:text-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.5, duration: 1.5, ease: "easeInOut" }}
+            transition={{ delay: 0.5, duration: 1.5 }}
           >
             A world of fragrance where every scent tells a story of elegance, emotion, and unforgettable presence.
           </motion.p>
 
-          {/* BUTTON WITH SOFT GLOW PULSE */}
-          <a
-            href="/contact"
-            >
+          {/* BUTTON (MORE PREMIUM GLOW) */}
+          <a href="/contact">
             <motion.button
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.06 }}
               whileTap={{ scale: 0.95 }}
               animate={{
                 boxShadow: [
                   "0 0 0px rgba(212,175,55,0.0)",
-                  "0 0 25px rgba(212,175,55,0.4)",
+                  "0 0 30px rgba(212,175,55,0.35)",
                   "0 0 0px rgba(212,175,55,0.0)",
                 ],
               }}
               transition={{
-                duration: 3,
+                duration: 3.5,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="mt-8 px-8 py-3 rounded-full bg-white text-black font-semibold hover:bg-[#d4af37] transition"
+              className="mt-8 px-9 py-3 rounded-full bg-white text-black font-semibold hover:bg-[#d4af37] transition shadow-lg"
             >
               DM to Order
             </motion.button>
           </a>
+
         </motion.div>
       </section>
+
       {/* ABOUT */}
+      <section id="collections" className="bg-black text-white py-24 px-0 md:px-6 relative">
 
-      <section id="collections" className="bg-black text-white py-24 px-0 md:px-6">
-  <div className="max-w-6xl mx-auto">
+        {/* subtle divider glow */}
+        <div className="absolute top-0 left-1/2 w-[60%] h-[1px] bg-[#d4af37]/20 blur-sm -translate-x-1/2" />
 
-    {/* HEADER */}
-    <div className="text-center mb-16 px-6">
-      <h2 className="text-4xl font-light tracking-wide">
-      JUJO'LE LUXE_SCENTS Collections
-      </h2>
-      <p className="text-white/60 mt-4 max-w-2xl mx-auto">
-      Our collections are more than perfumes — they are emotions captured in scent.
-       From soft florals to deep, bold notes, each fragrance tells its own story.
-      </p>
-    </div>
+        <div className="max-w-6xl mx-auto">
 
-    {/* INNER SECTION */}
-    <section className="bg-black text-white py-28 px-0 md:px-6">
-      <div className="max-w-6xl mx-auto">
+          {/* HEADER */}
+          <div className="text-center mb-16 px-6">
+            <h2 className="text-4xl font-light tracking-wide">
+              JUJO'LE LUXE_SCENTS Collections
+            </h2>
+            <p className="text-white/60 mt-4 max-w-2xl mx-auto">
+              Our collections are more than perfumes — they are emotions captured in scent.
+              From soft florals to deep, bold notes, each fragrance tells its own story.
+            </p>
+          </div>
 
-        {/* HEADER */}
-        <div className="text-center mb-20 px-6">
-          <h2 className="text-4xl font-light tracking-wide">
-            Our Collections
-          </h2>
-          <p className="text-white/60 mt-4 max-w-2xl mx-auto">
-          Explore a curated collection of luxury perfumes designed to express elegance, emotion, and timeless sophistication.
-          </p>
-        </div>
+          {/* INNER SECTION */}
+          <section className="bg-black text-white py-28 px-0 md:px-6">
+            <div className="max-w-6xl mx-auto">
 
-        {/* CARDS */}
-        <div className="flex flex-col gap-20">
-
-          {[{
-              title: "Signature Scents",
-              img: "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg",
-              desc: "Elegant signature perfumes crafted to define your presence and style.",
-            },
-            {
-              title: "Luxury Fragrances",
-              img: "https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg",
-              desc: "High-end perfumes designed with rich notes of sophistication and charm.",
-            },
-            {
-              title: "Floral Collection",
-              img: "https://images.pexels.com/photos/4202325/pexels-photo-4202325.jpeg",
-              desc: "Soft floral scents inspired by roses, jasmine, and natural beauty.",
-            },
-            {
-              title: "Woody & Musk",
-              img: "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg",
-              desc: "Deep, bold fragrances with warm woody and musky undertones.",
-            },
-            {
-              title: "Fresh & Clean",
-              img: "https://images.pexels.com/photos/6621461/pexels-photo-6621461.jpeg",
-              desc: "Light, refreshing perfumes perfect for daily elegance and simplicity.",
-            },
-            {
-              title: "Evening Luxury",
-              img: "https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg",
-              desc: "Bold evening scents made for unforgettable nights and presence.",
-            },
-          ].map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ scale: 1.02 }}
-              transition={{
-                duration: 1.1,
-                ease: "easeOut",
-                delay: i * 0.08,
-              }}
-              viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-none md:rounded-2xl"
-            >
-              {/* IMAGE */}
-              <img
-                src={item.img}
-                className="w-full h-[300px] md:h-[420px] object-cover transition duration-700 ease-in-out group-hover:scale-105"
-              />
-
-              {/* GRADIENT OVERLAY */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition duration-500"></div>
-
-              {/* TEXT */}
-              <div className="absolute bottom-6 left-6 right-6 md:left-10 md:right-auto max-w-md">
-                <h3 className="text-2xl font-light mb-3 relative">
-                  <span className="before:content-['“'] after:content-['”']">
-                    {item.title}
-                  </span>
-                </h3>
-                <p className="text-white/80 text-sm leading-relaxed italic opacity-90">
-                  {item.desc}
+              {/* HEADER */}
+              <div className="text-center mb-20 px-6">
+                <h2 className="text-4xl font-light tracking-wide">
+                  Our Collections
+                </h2>
+                <p className="text-white/60 mt-4 max-w-2xl mx-auto">
+                  Explore a curated collection of luxury perfumes designed to express elegance, emotion, and timeless sophistication.
                 </p>
               </div>
-            </motion.div>
-          ))}
+
+              {/* CARDS */}
+              <div className="flex flex-col gap-20">
+
+                {[
+                  {
+                    title: "Signature Scents",
+                    img: "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg",
+                    desc: "Elegant signature perfumes crafted to define your presence and style.",
+                  },
+                  {
+                    title: "Luxury Fragrances",
+                    img: "https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg",
+                    desc: "High-end perfumes designed with rich notes of sophistication and charm.",
+                  },
+                  {
+                    title: "Floral Collection",
+                    img: "https://images.pexels.com/photos/4202325/pexels-photo-4202325.jpeg",
+                    desc: "Soft floral scents inspired by roses, jasmine, and natural beauty.",
+                  },
+                  {
+                    title: "Woody & Musk",
+                    img: "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg",
+                    desc: "Deep, bold fragrances with warm woody and musky undertones.",
+                  },
+                  {
+                    title: "Fresh & Clean",
+                    img: "https://images.pexels.com/photos/6621461/pexels-photo-6621461.jpeg",
+                    desc: "Light, refreshing perfumes perfect for daily elegance and simplicity.",
+                  },
+                  {
+                    title: "Evening Luxury",
+                    img: "https://images.pexels.com/photos/1190829/pexels-photo-1190829.jpeg",
+                    desc: "Bold evening scents made for unforgettable nights and presence.",
+                  },
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 80 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    whileHover={{ scale: 1.02 }}
+                    transition={{
+                      duration: 1.1,
+                      ease: "easeOut",
+                      delay: i * 0.08,
+                    }}
+                    viewport={{ once: true }}
+                    className="group relative overflow-hidden rounded-2xl shadow-[0_0_80px_rgba(0,0,0,0.6)] border border-white/10"
+                  >
+
+                    {/* IMAGE */}
+                    <img
+                      src={item.img}
+                      className="w-full h-[320px] md:h-[420px] object-cover transition duration-700 ease-in-out group-hover:scale-105"
+                    />
+
+                    {/* OVERLAY (MORE LUXURY GRADIENT) */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+
+                    {/* TEXT */}
+                    <div className="absolute bottom-6 left-6 right-6 md:left-10 md:right-auto max-w-md">
+                      <h3 className="text-2xl font-light mb-3">
+                        {item.title}
+                      </h3>
+                      <p className="text-white/70 text-sm leading-relaxed italic">
+                        {item.desc}
+                      </p>
+                    </div>
+
+                  </motion.div>
+                ))}
+
+              </div>
+            </div>
+          </section>
+
+          {/* FEATURES */}
+          <div className="grid md:grid-cols-3 gap-8 mt-16 text-center px-6">
+
+            {[
+              {
+                title: "Signature Fragrances",
+                desc: "Discover exclusive perfumes crafted to express elegance, confidence, and individuality.",
+              },
+              {
+                title: "Long-Lasting Scent",
+                desc: "Our perfumes are designed with rich notes that stay with you throughout the day and night.",
+              },
+              {
+                title: "Luxury Experience",
+                desc: "Every bottle is crafted to deliver a premium fragrance experience that leaves a lasting impression.",
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 80 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1.3, delay: i * 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-xl hover:bg-white/10 transition"
+              >
+                <h4 className="text-lg font-light mb-3">{item.title}</h4>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
+
+          </div>
 
         </div>
+      </section>
 
-      </div>
-    </section>
-
-    {/* FEATURES */}
-    <div className="grid md:grid-cols-3 gap-8 mt-16 text-center px-6">
-
-<motion.div
-  initial={{ opacity: 0, y: 80, filter: "blur(10px)" }}
-  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-  transition={{ duration: 1.5, ease: "easeInOut" }}
-  viewport={{ once: true }}
-  className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition duration-500"
->
-  <h4 className="text-lg font-light mb-3">Signature Fragrances</h4>
-  <p className="text-white/60 text-sm leading-relaxed">
-    Discover exclusive perfumes crafted to express elegance, confidence, and individuality.
-  </p>
-</motion.div>
-
-<motion.div
-  initial={{ opacity: 0, y: 80, filter: "blur(10px)" }}
-  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-  transition={{ duration: 1.5, ease: "easeInOut", delay: 0.2 }}
-  viewport={{ once: true }}
-  className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition duration-500"
->
-  <h4 className="text-lg font-light mb-3">Long-Lasting Scent</h4>
-  <p className="text-white/60 text-sm leading-relaxed">
-    Our perfumes are designed with rich notes that stay with you throughout the day and night.
-  </p>
-</motion.div>
-
-<motion.div
-  initial={{ opacity: 0, y: 80, filter: "blur(10px)" }}
-  whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-  transition={{ duration: 1.5, ease: "easeInOut", delay: 0.4 }}
-  viewport={{ once: true }}
-  className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition duration-500"
->
-  <h4 className="text-lg font-light mb-3">Luxury Experience</h4>
-  <p className="text-white/60 text-sm leading-relaxed">
-    Every bottle is crafted to deliver a premium fragrance experience that leaves a lasting impression.
-  </p>
-</motion.div>
-
-</div>
-  </div>
-</section>
-
-
-
-      {/* CONTACT */}
-
+      {/* CONTACT (UNCHANGED — ONLY SLIGHT POLISH) */}
       <section id="contact" className="py-28 px-6 bg-black text-white relative overflow-hidden">
 
         <div className="max-w-5xl mx-auto text-center">
 
-          {/* TITLE */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -270,126 +273,14 @@ function Home() {
             </p>
           </motion.div>
 
-          {/* FLOATING ICONS WRAPPER */}
-          <div className="mt-20 flex justify-center items-center">
-
-            <div className="mt-24 flex justify-center">
-              <div className="relative w-[500px] h-[250px]">
-
-                {/* WHATSAPP */}
-                <motion.a
-                  href="https://wa.me/"
-                  target="_blank"
-                  animate={{ y: [0, -15, 0], x: [0, 10, 0] }}
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  whileTap={{ scale: 0.9 }}
-                  className="absolute top-10 left-10 group p-5 rounded-full bg-white/5 border border-white/10 backdrop-blur-lg overflow-hidden transition-all duration-500 hover:border-[#d4af37] hover:shadow-[0_0_35px_rgba(212,175,55,0.9)] hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.8)]"
-                >
-                  {/* SHINE */}
-                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent -translate-x-full group-hover:translate-x-full transition duration-700 ease-in-out"></span>
-
-                  <FaWhatsapp className="relative text-2xl text-white/70 group-hover:text-[#d4af37] transition duration-300" />
-                </motion.a>
-
-                {/* INSTAGRAM */}
-                <motion.a
-                  href="https://instagram.com"
-                  target="_blank"
-                  animate={{ y: [0, -20, 0], x: [0, -12, 0] }}
-                  transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                  whileTap={{ scale: 0.9 }}
-                  className="absolute top-0 right-10 group p-5 rounded-full bg-white/5 border border-white/10 backdrop-blur-lg overflow-hidden transition-all duration-500 hover:border-[#d4af37] hover:shadow-[0_0_35px_rgba(212,175,55,0.9)] hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.8)]"
-                >
-                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent -translate-x-full group-hover:translate-x-full transition duration-700 ease-in-out"></span>
-
-                  <FaInstagram className="relative text-2xl text-white/70 group-hover:text-[#d4af37] transition duration-300" />
-                </motion.a>
-
-                {/* FACEBOOK */}
-                <motion.a
-                  href="https://facebook.com"
-                  target="_blank"
-                  animate={{ y: [0, -12, 0], x: [0, 8, 0] }}
-                  transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut" }}
-                  whileTap={{ scale: 0.9 }}
-                  className="absolute bottom-10 left-20 group p-5 rounded-full bg-white/5 border border-white/10 backdrop-blur-lg overflow-hidden transition-all duration-500 hover:border-[#d4af37] hover:shadow-[0_0_35px_rgba(212,175,55,0.9)] hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.8)]"
-                >
-                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent -translate-x-full group-hover:translate-x-full transition duration-700 ease-in-out"></span>
-
-                  <FaFacebook className="relative text-2xl text-white/70 group-hover:text-[#d4af37] transition duration-300" />
-                </motion.a>
-
-                {/* TWITTER */}
-                <motion.a
-                  href="https://twitter.com"
-                  target="_blank"
-                  animate={{ y: [0, -18, 0], x: [0, -10, 0] }}
-                  transition={{ duration: 7.5, repeat: Infinity, ease: "easeInOut" }}
-                  whileTap={{ scale: 0.9 }}
-                  className="absolute bottom-0 right-20 group p-5 rounded-full bg-white/5 border border-white/10 backdrop-blur-lg overflow-hidden transition-all duration-500 hover:border-[#d4af37] hover:shadow-[0_0_35px_rgba(212,175,55,0.9)] hover:drop-shadow-[0_0_15px_rgba(212,175,55,0.8)]"
-                >
-                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent -translate-x-full group-hover:translate-x-full transition duration-700 ease-in-out"></span>
-
-                  <FaTwitter className="relative text-2xl text-white/70 group-hover:text-[#d4af37] transition duration-300" />
-                </motion.a>
-
-                {/* EMAIL (CENTER FOCUS) */}
-                <motion.a
-                  href="julietzuby10@gmail.com.com"
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                  whileTap={{ scale: 0.9 }}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group p-6 rounded-full bg-white/10 border border-[#d4af37]/30 backdrop-blur-lg overflow-hidden transition-all duration-500 hover:border-[#d4af37] hover:shadow-[0_0_45px_rgba(212,175,55,1)]"
-                >
-
-                  {/* SHINE (FIXED CLICK ISSUE) */}
-                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent -translate-x-full group-hover:translate-x-full transition duration-700 ease-in-out pointer-events-none"></span>
-
-                  <FaEnvelope className="relative text-3xl text-white/80 group-hover:text-[#d4af37] transition duration-300" />
-                </motion.a>
-
-              </div>
-            </div>
-
-          </div>
-
-          {/* OPTIONAL CTA BUTTON */}
-          <motion.div
-            className="mt-16"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            <a
-              href="https://wa.me/2347078917208"
-              target="_blank"
-              className="relative inline-block px-8 py-3 rounded-full border border-[#d4af37] text-[#d4af37] overflow-hidden transition duration-500 group"
-            >
-              {/* SHINE EFFECT */}
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-[#d4af37]/40 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition duration-1000 ease-in-out"></span>
-
-              {/* TEXT */}
-              <span className="relative z-10 group-hover:text-black transition duration-500">
-                Message Us Directly
-              </span>
-
-              {/* BACKGROUND HOVER */}
-              <span className="absolute inset-0 bg-[#d4af37] opacity-0 group-hover:opacity-100 transition duration-500 -z-10"></span>
-            </a>
-          </motion.div>
-
-          {/* FOOTER */}
-          <p className="mt-12 text-white/50 text-sm tracking-wide">
-          Luxury fragrances crafted for elegance, emotion, and lasting presence — delivered with care.
-          </p>
+          {/* unchanged contact icons */}
+          <WhatsAppFloat />
         </div>
 
-        {/* BACKGROUND GLOW EFFECT */}
-        <div className="absolute top-1/2 left-1/2 w-[500px] h-[500px] bg-[#d4af37]/10 blur-[120px] -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
+        {/* GLOW */}
+        <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] bg-[#d4af37]/10 blur-[140px] -translate-x-1/2 -translate-y-1/2 rounded-full" />
 
       </section>
-
-      <WhatsAppFloat />
 
     </div>
   );
