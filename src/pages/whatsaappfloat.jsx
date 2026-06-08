@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/234XXXXXXXXXX" 
+      href="https://wa.me/+234 707 891 7208" 
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50"
