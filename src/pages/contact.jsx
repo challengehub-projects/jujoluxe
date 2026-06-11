@@ -9,7 +9,7 @@ export default function Contact() {
   const phoneNumber = "2347078917208";
 
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-    message || "Hello JUJO'LE LUXE_SCENTS, I want to make an order."
+    message || "Hello JJL_SCENTS 👋. I would love to purchase a lovely perfume. I'm looking for something long-lasting, luxurious, and capable of leaving a memorable impression. Please send me your best recommendations, available sizes, and prices. Thank you.."
   )}`;
 
   return (
@@ -81,7 +81,7 @@ export default function Contact() {
             className="relative rounded-3xl overflow-hidden"
           >
             <img
-              src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg"
+              src="https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg"
               className="h-[560px] w-full object-cover scale-110"
             />
 
