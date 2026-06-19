@@ -1,4 +1,5 @@
 import { FaWhatsapp, FaPhone, FaInstagram, FaFacebook, FaTwitter, FaEnvelope } from "react-icons/fa";
+import WhatsAppButton from "./whatsappButton";
 
 export default function Footer() {
     return (
@@ -11,7 +12,7 @@ export default function Footer() {
                     {/* BRAND */}
                     <div>
                         <h1 className="text-xl tracking-[6px] font-light mb-4">
-                        JUJO'LE LUXE_SCENTS
+                            JUJO'LE LUXE_SCENTS
                         </h1>
                         <p className="text-white/50 text-sm leading-relaxed">
                             Luxury fashion, beauty & lifestyle brand offering premium collections
@@ -47,7 +48,7 @@ export default function Footer() {
 
                             <div className="flex items-center gap-2">
                                 <FaPhone className="text-[#d4af37]" />
-                                <span>+234 707 891 7208</span>
+                                <span>+234 816 283 0837</span>
                             </div>
 
                             <div className="flex items-center gap-2">
@@ -55,15 +56,22 @@ export default function Footer() {
                                 <span>julietzuby10@gmail.com</span>
                             </div>
 
+                            <div className="flex items-center gap-2">
+                                <FaEnvelope className="text-[#d4af37]" />
+                                <span>nmesomachiaguocha@gmail.com</span>
+                            </div>
+
                             {/* WHATSAPP BUTTON */}
-                            <a
+                            {/*      <a
                                 href="https://wa.me/2347078917208"
                                 target="_blank"
                                 className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-full border border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37] hover:text-black transition"
                             >
                                 <FaWhatsapp />
                                 Chat on WhatsApp
-                            </a>
+                            </a> */}
+
+                            <WhatsAppButton />
 
                         </div>
                     </div>
@@ -76,9 +84,13 @@ export default function Footer() {
                         <FaWhatsapp className="text-xl hover:text-[#d4af37] transition" />
                     </a>
 
-                    <a href="https://Julie_zubechi.com" target="_blank">
-                        <FaInstagram className="text-xl hover:text-[#d4af37] transition" />
+                    <a href="https://wa.me/2348162830837" target="_blank">
+                        <FaWhatsapp className="text-xl hover:text-[#d4af37] transition" />
                     </a>
+
+                       <a href="https://www.instagram.com/joannmesomachi?utm_source=qr&igsh=MW45aXN5bnJpZGdsNg==" target="_blank">
+                        <FaInstagram className="text-xl hover:text-[#d4af37] transition" />
+                    </a> 
 
                     <a href="https://facebook.com" target="_blank">
                         <FaFacebook className="text-xl hover:text-[#d4af37] transition" />
@@ -91,6 +103,12 @@ export default function Footer() {
                     <a href="mailto:julietzuby10@gmail.com">
                         <FaEnvelope className="text-xl hover:text-[#d4af37] transition" />
                     </a>
+
+                    <a href="mailto:nmesomachiaguocha@gmail.com">
+                        <FaEnvelope className="text-xl hover:text-[#d4af37] transition" />
+                    </a>
+
+
 
                 </div>
 

@@ -1,183 +1,372 @@
 import { motion } from "framer-motion";
-import { FaWhatsapp, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaFacebook,
+  FaTwitter,
+} from "react-icons/fa";
 import { useState } from "react";
 import WhatsAppFloat from "./whatsaappfloat";
 
 export default function Contact() {
   const [message, setMessage] = useState("");
 
-  const phoneNumber = "2347078917208";
+  const whatsappContacts = [
+    {
+      name: "Sales & Orders",
+      phone: "2347078917208",
+      description: "Perfumes, skincare & beauty orders",
+    },
+    {
+      name: "Customer Support",
+      phone: "2348162830837",
+      description: "Questions, delivery & assistance",
+    },
+  ];
 
-  const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-    message || "Hello JJL_SCENTS 👋. I would love to purchase a lovely perfume. I'm looking for something long-lasting, luxurious, and capable of leaving a memorable impression. Please send me your best recommendations, available sizes, and prices. Thank you.."
+  const [selectedContact, setSelectedContact] = useState(
+    whatsappContacts[0]
+  );
+
+  const whatsappLink = `https://wa.me/${
+    selectedContact.phone
+  }?text=${encodeURIComponent(
+    message ||
+      `Hello JJL_SCENTS 👋
+
+I would love to purchase one of your products.
+
+Please send your available collections, prices, recommendations and sizes.
+
+Thank you.`
   )}`;
 
   return (
     <section className="bg-black text-white py-32 px-6 relative overflow-hidden">
 
-      {/* 🌟 BEAUTY AURA BACKGROUND */}
+      {/* LUXURY BACKGROUND */}
       <div className="absolute inset-0 pointer-events-none">
 
-        {/* floating gold glow */}
         <motion.div
           className="absolute w-[600px] h-[600px] bg-[#d4af37]/20 blur-[160px] top-0 left-0 rounded-full"
-          animate={{ x: [0, 60, 0], y: [0, 40, 0] }}
-          transition={{ duration: 16, repeat: Infinity }}
+          animate={{
+            x: [0, 60, 0],
+            y: [0, 40, 0],
+          }}
+          transition={{
+            duration: 16,
+            repeat: Infinity,
+          }}
         />
 
-        {/* floating white silk glow */}
         <motion.div
           className="absolute w-[700px] h-[700px] bg-white/10 blur-[180px] bottom-0 right-0 rounded-full"
-          animate={{ x: [0, -80, 0], y: [0, -60, 0] }}
-          transition={{ duration: 18, repeat: Infinity }}
+          animate={{
+            x: [0, -80, 0],
+            y: [0, -60, 0],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+          }}
         />
 
-        {/* tiny beauty sparkles */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-1/2 w-1 h-1 bg-white rounded-full animate-pulse" />
-          <div className="absolute top-1/3 left-20 w-1 h-1 bg-[#d4af37] rounded-full animate-pulse" />
-          <div className="absolute bottom-40 right-32 w-1 h-1 bg-white rounded-full animate-pulse" />
-        </div>
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
 
         {/* HEADER */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+          initial={{
+            opacity: 0,
+            y: 40,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1,
+          }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-light tracking-wide">
+
+          <h2 className="text-4xl md:text-6xl font-light tracking-widest">
             JJL_SCENTS
           </h2>
 
           <p className="text-white/60 mt-5 max-w-2xl mx-auto leading-relaxed">
-            Experience beauty, fragrance & elegance in a new way — talk directly with your luxury brand assistant.
+            Luxury perfumes, premium skincare, and unforgettable
+            fragrances curated to elevate your presence.
           </p>
 
-          {/* BADGES */}
           <div className="flex justify-center gap-3 mt-6 flex-wrap">
-            <span className="px-4 py-1 text-xs border border-white/10 rounded-full bg-white/5">
+
+            <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs">
               Fast Response
             </span>
-            <span className="px-4 py-1 text-xs border border-white/10 rounded-full bg-white/5">
+
+            <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs">
               Luxury Service
             </span>
-            <span className="px-4 py-1 text-xs border border-white/10 rounded-full bg-white/5">
+
+            <span className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-xs">
               24/7 Orders
             </span>
+
           </div>
+
         </motion.div>
 
-        {/* MAIN GRID */}
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        {/* GRID */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          {/* LEFT EXPERIENCE PANEL */}
+          {/* IMAGE PANEL */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="relative rounded-3xl overflow-hidden"
+            initial={{
+              opacity: 0,
+              y: 40,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            className="relative overflow-hidden rounded-3xl"
           >
+
             <img
               src="https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg"
-              className="h-[560px] w-full object-cover scale-110"
+              alt=""
+              className="w-full h-[600px] object-cover"
             />
 
-            {/* gradient luxury overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
 
-            {/* floating label */}
             <div className="absolute bottom-8 left-8">
-              <h3 className="text-2xl font-light">
+
+              <h3 className="text-3xl font-light">
                 Beauty Meets Luxury
               </h3>
-              <p className="text-white/70 text-sm mt-1">
-                Your personal fragrance & beauty concierge
+
+              <p className="text-white/70 mt-2">
+                Personalized fragrance recommendations
               </p>
+
             </div>
 
-            {/* floating micro glow */}
-            <motion.div
-              className="absolute top-10 right-10 w-20 h-20 bg-[#d4af37]/30 blur-2xl rounded-full"
-              animate={{ scale: [1, 1.3, 1] }}
-              transition={{ duration: 5, repeat: Infinity }}
-            />
           </motion.div>
 
-          {/* RIGHT FORM PANEL */}
+          {/* CONTACT PANEL */}
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-2xl shadow-[0_0_100px_rgba(212,175,55,0.08)]"
+            initial={{
+              opacity: 0,
+              x: 60,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            className="
+              bg-white/5
+              border
+              border-white/10
+              rounded-3xl
+              p-8
+              backdrop-blur-2xl
+            "
           >
 
-            <h3 className="text-xl font-light mb-6">
-              Tell Us What You Want
+            <h3 className="text-2xl font-light mb-2">
+              Contact Us
             </h3>
 
+            <p className="text-white/50 text-sm mb-8">
+              Select a Contact and send your request directly.
+            </p>
+
+            {/* CONTACT SELECTOR */}
+            <div className="space-y-3 mb-8">
+
+              {whatsappContacts.map((contact) => (
+
+                <button
+                  key={contact.phone}
+                  onClick={() =>
+                    setSelectedContact(contact)
+                  }
+                  className={`
+                    w-full text-left p-4 rounded-2xl border transition-all
+                    ${
+                      selectedContact.phone === contact.phone
+                        ? "bg-[#d4af37] text-black border-[#d4af37]"
+                        : "bg-white/5 border-white/10 hover:bg-white/10"
+                    }
+                  `}
+                >
+
+                  <div className="font-semibold">
+                    {contact.name}
+                  </div>
+
+                  <div
+                    className={`text-sm mt-1 ${
+                      selectedContact.phone === contact.phone
+                        ? "text-black/70"
+                        : "text-white/50"
+                    }`}
+                  >
+                    {contact.description}
+                  </div>
+
+                  <div
+                    className={`text-xs mt-2 ${
+                      selectedContact.phone === contact.phone
+                        ? "text-black/60"
+                        : "text-white/40"
+                    }`}
+                  >
+                    +{contact.phone}
+                  </div>
+
+                </button>
+
+              ))}
+
+            </div>
+
+            {/* MESSAGE */}
             <textarea
-              rows="6"
+              rows={6}
               value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              placeholder="Example: I want luxury perfume, skincare set, or beauty products..."
-              className="w-full p-5 bg-black/40 border border-white/10 rounded-2xl text-white placeholder-white/40 outline-none focus:border-[#d4af37] transition"
+              onChange={(e) =>
+                setMessage(e.target.value)
+              }
+              placeholder="Tell us what fragrance, skincare or beauty products you're interested in..."
+              className="
+                w-full
+                p-5
+                rounded-2xl
+                bg-black/40
+                border
+                border-white/10
+                outline-none
+                focus:border-[#d4af37]
+                text-white
+                placeholder-white/40
+              "
             />
 
-            {/* MAIN CTA */}
+            {/* CTA */}
             <motion.a
               href={whatsappLink}
               target="_blank"
-              whileHover={{ scale: 1.03 }}
-              className="mt-6 inline-flex items-center justify-center w-full gap-3 px-6 py-3 rounded-full bg-[#d4af37] text-black font-medium shadow-lg"
+              rel="noreferrer"
+              whileHover={{
+                scale: 1.02,
+              }}
+              whileTap={{
+                scale: 0.98,
+              }}
+              className="
+                mt-6
+                flex
+                items-center
+                justify-center
+                gap-4
+                w-full
+                py-4
+                rounded-2xl
+                bg-[#d4af37]
+                text-black
+                font-semibold
+                shadow-xl
+              "
             >
-              <FaWhatsapp />
-              Send Luxury Request
+
+              <FaWhatsapp size={22} />
+
+              <div className="text-left">
+
+                <div>
+                  Send WhatsApp Message
+                </div>
+
+                <div className="text-xs opacity-70">
+                  {selectedContact.name}
+                </div>
+
+              </div>
+
             </motion.a>
 
-            {/* SOCIAL ROW */}
-            <div className="flex justify-center gap-7 mt-10 text-white/60">
+            {/* SOCIALS */}
+            <div className="flex justify-center gap-8 mt-10">
 
-              <FaInstagram className="text-xl hover:text-[#d4af37] transition cursor-pointer" />
-              <FaFacebook className="text-xl hover:text-[#d4af37] transition cursor-pointer" />
-              <FaTwitter className="text-xl hover:text-[#d4af37] transition cursor-pointer" />
+              <FaInstagram className="text-xl text-white/60 hover:text-[#d4af37] cursor-pointer transition" />
+
+              <FaFacebook className="text-xl text-white/60 hover:text-[#d4af37] cursor-pointer transition" />
+
+              <FaTwitter className="text-xl text-white/60 hover:text-[#d4af37] cursor-pointer transition" />
 
             </div>
 
             <p className="text-center text-white/40 text-sm mt-6">
-              Luxury replies within hours — always personal, always elegant.
+              Premium customer care • Luxury experience • Fast replies
             </p>
 
           </motion.div>
+
         </div>
 
-        {/* BEAUTY FEATURES SECTION */}
+        {/* FEATURES */}
         <div className="grid md:grid-cols-3 gap-6 mt-24">
 
           {[
             {
               title: "Luxury Fragrance Service",
-              desc: "Personal scent recommendations tailored to your style and mood.",
+              desc: "Personalized perfume recommendations based on your personality and lifestyle.",
             },
             {
               title: "Beauty Concierge",
-              desc: "Get curated skincare, beauty & lifestyle product guidance.",
+              desc: "Expert skincare and beauty product guidance tailored to your needs.",
             },
             {
               title: "VIP Ordering",
-              desc: "Fast, private ordering with premium customer experience.",
+              desc: "Private ordering experience with premium customer support.",
             },
-          ].map((item, i) => (
+          ].map((item, index) => (
             <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.2 }}
-              className="p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl hover:bg-white/10 transition"
+              key={index}
+              initial={{
+                opacity: 0,
+                y: 30,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                delay: index * 0.2,
+              }}
+              className="
+                p-8
+                rounded-2xl
+                bg-white/5
+                border
+                border-white/10
+                hover:bg-white/10
+                transition
+              "
             >
-              <h4 className="text-lg font-light mb-2">{item.title}</h4>
-              <p className="text-white/60 text-sm">{item.desc}</p>
+
+              <h4 className="text-lg mb-3">
+                {item.title}
+              </h4>
+
+              <p className="text-white/60 text-sm">
+                {item.desc}
+              </p>
+
             </motion.div>
           ))}
 
